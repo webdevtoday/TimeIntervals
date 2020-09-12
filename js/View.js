@@ -18,16 +18,32 @@ let View = {
         </button>
       `,
     stored_processes: `
-      <h2>Stored Processes</h2>
+      <div class="stored-processes">
+        <h2 class="stored-processes__title">Stored Processes</h2>
 
-      <ol>
-        <li>Process 1</li>
-        <li>Process 2</li>
-        <li>Process 3</li>
-      </ol>
+        <ol class="stored-processes__list">
+          <li>Process 1</li>
+          <li>Process 2</li>
+          <li>Process 3</li>
+        </ol>
+      </div>
     `,
     new_process: `
-      <h2>New process</h2>
+      <div class="new-process">
+        <h2 class="new-process__title">New process</h2>
+
+        <div class="new-process__form">
+          <div class="new-process__input">
+            <input type="text" placeholder="Title">
+          </div>
+          <div class="new-process__input">
+            <textarea placeholder="Description"></textarea>
+          </div>
+          <div class="new-process__button">
+            <button class="button button_big_success">Create process</button>
+          </div>
+        </div>
+      </div>
     `,
   },
 

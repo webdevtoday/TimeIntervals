@@ -59,3 +59,34 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.stored-processes {
+  padding: 20px;
+}
+.stored-processes__title {
+  margin: 0 0 20px 0;
+}
+
+.new-process {
+  padding: 20px;
+  width: 100%;
+}
+.new-process__form {
+  padding: 20px;
+}
+.new-process__input {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+}
+.new-process__input input,
+.new-process__input textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  font-size: 1em;
+}
+.new-process__input textarea {
+  height: 150px;
+  resize: none;
+}

@@ -1,8 +1,8 @@
 let Process = {
-  create: function () {
+  create: function (process) {
     return {
-      name: 'Раны в ДМ',
-      description: 'Раны в ДМ за понедельник',
+      name: process.name,
+      description: process.description,
       timeIntervals: [],
       time_created: 0,
       time_modified: 0,

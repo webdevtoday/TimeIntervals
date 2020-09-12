@@ -1,46 +1,47 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 .app {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 .app__button {
-    max-width: 165px;
-    margin: 20px;
+  max-width: 165px;
+  margin: 20px;
 }
 
 .button {
-    display: inline-block;
-    padding: 6px 12px;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    user-select: none;
-    background: #EFEFEF;
-    border: none;
-    border-radius: 4px;
+  display: inline-block;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background: #efefef;
+  border: none;
+  border-radius: 4px;
 }
 .button_big_primary {
-    background: #007BFF;
-    color: #FFFFFF;
-    padding: 8px 16px;
-    font-size: 2rem;
+  background: #007bff;
+  color: #ffffff;
+  padding: 8px 16px;
+  font-size: 2rem;
 }
 .button_big_success {
-    background: #28A745;
-    color: #FFFFFF;
-    padding: 8px 16px;
-    font-size: 2rem;
+  background: #28a745;
+  color: #ffffff;
+  padding: 8px 16px;
+  font-size: 2rem;
 }

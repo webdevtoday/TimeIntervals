@@ -90,3 +90,7 @@ body {
   height: 150px;
   resize: none;
 }
+
+.executing-process {
+  padding: 20px;
+}

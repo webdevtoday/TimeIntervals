@@ -40,21 +40,36 @@ let View = {
             <textarea placeholder="Description"></textarea>
           </div>
           <div class="new-process__button">
-            <button class="button button_big_success">Create process</button>
+            <button class="button button_big_success" data-route="create_process">Create process</button>
           </div>
         </div>
       </div>
     `,
+    executing_process: `
+      <div class="executing-process">
+        <h2 class="executing-process__title">{{name}}</h2>
+        <p class="executing-process__description">{{description}}</p>
+        <p>Created: {{date}}</p>
+      </div>
+    `,
   },
 
-  render: function (selector, view_name) {
+  paramsRender: function (html, params) {
+    if (!params) return html;
+    return html.replace(/{{(?<param>.+?)}}/gim, (match, param) => {
+      return params[param];
+    });
+  },
+
+  render: function (selector, view_name, params) {
     let startElem = document.querySelector(selector);
 
     startElem.insertAdjacentHTML('beforeend', this.views[view_name]);
   },
-  renderAll: function (selector, view_name) {
+
+  renderAll: function (selector, view_name, params) {
     let startElem = document.querySelector(selector);
 
-    startElem.innerHTML = this.views[view_name];
+    startElem.innerHTML = this.paramsRender(this.views[view_name], params);
   },
 };

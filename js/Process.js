@@ -1,4 +1,4 @@
-let Process = {
+const Process = {
   create: function (process) {
     return {
       id: 0,

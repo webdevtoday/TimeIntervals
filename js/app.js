@@ -1,19 +1,19 @@
-let appState = {
-  previousRoutes: [],
-  previousParameters: [],
-  route: 'index',
-  parameters: [],
+const appState = {
+    previousRoutes: [],
+    previousParameters: [],
+    route: 'index',
+    parameters: [],
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelector('.app').addEventListener('click', event => {
-    if (event.target.dataset.route != undefined) {
-      Controller.controller(event.target.getAttribute('data-route'));
-    }
-  });
-  View.render('.app', 'app_header');
-  View.render('.app', 'app_main');
-  Controller.controller(appState.route);
+    document.querySelector('.app').addEventListener('click', event => {
+        if (event.target.dataset.route != undefined) {
+            Controller.controller(event.target.getAttribute('data-route'));
+        }
+    });
+    View.render('.app', 'app_header');
+    View.render('.app', 'app_main');
+    Controller.controller(appState.route);
 });
 
 // Пример обьекта процесса с временными отрезками

@@ -13,13 +13,16 @@ const Controller = {
         let params = {
             list: Processes.get.list(),
         };
-        // console.log(params);
+
+        if (params.list.length <= 0) return false;
+
         View.renderAll('main', 'stored_processes', params);
     },
 
     new_process: function () {
         View.renderAll('main', 'new_process');
     },
+
     create_process: function () {
         let name = document.querySelector('.new-process__input input').value;
         let desc = document.querySelector('.new-process__input textarea').value;
@@ -44,8 +47,8 @@ const Controller = {
             date: `${date} ${month} ${year} ${hours}:${minutes}`,
         };
         View.renderAll('main', 'executing_process', params);
-        // console.log(processCreated);
     },
+
     history_back: function () {
         if (appState.previousRoutes.length <= 1) return false;
         appState.previousRoutes.pop();

@@ -6,7 +6,10 @@ const Controller = {
         this[controller_name]();
     },
     index: function () {
-        View.renderAll('main', 'index');
+        let params = {
+            emptyProcesses: Processes.get.list() > 0 ? false : true,
+        };
+        View.renderAll('main', 'index', params);
     },
 
     stored_processes: function () {

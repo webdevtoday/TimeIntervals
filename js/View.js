@@ -10,7 +10,7 @@ const View = {
             <main class="main"></main>
         `,
         index: `
-            <button class="button button_big_primary app__button" data-route="stored_processes">
+            <button class="button button_big_primary app__button" data-route="stored_processes" {{emptyProcesses ? disabled : }}>
                 Stored Processes
             </button>
             <button class="button button_big_success app__button" data-route="new_process">
@@ -67,7 +67,9 @@ const View = {
             return str;
         });
 
-        console.log(html);
+        html = html.replace(/{{(.+?)\s*\?\s*(.+?)\s*:\s*(.+?)}}/gim, (match, flag, class1, class2) => {
+            return params[flag] ? class1 : class2;
+        });
 
         // Не работает в IE
         // return html.replace(/{{(?<param>.+?)}}/gim, (match, param) => {
